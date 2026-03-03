@@ -1,0 +1,55 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(red, green, blue);
+}
+
+.Experiencia{
+  background-color: #cff3df;  
+}
+
+.Servicios{
+  background-color: beige;
+}
+
+.Testimonios{
+  background-color: rgb(220, 220, 255);
+}
+
+.Testimonioh3{
+  background-color: #cff3df;
+}
+
+.paginaactiva{
+  background-color: gainsboro;
+  text-shadow: 2px, 2px, 2px, rgb(140, 47, b49);
+}
+
+.imagen300{
+  height: 300px;
+  width: 300px;
+}
+
+footer ul{
+  background-color: chocolate;
+}
+
+h2{
+  text-align: center;
+}
+
+form{
+  background-color: cadetblue;
+  color: white;
+  padding: 30px;
+}
+
+nav ul li{
+  list-style: none;
+}
