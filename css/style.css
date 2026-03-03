@@ -1,4 +1,4 @@
-/* Reset */
+/* ====== Reset ====== */
 * {
     margin: 0;
     padding: 0;
@@ -44,28 +44,13 @@ header{
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 14px 0;
+  padding: 3px 0;
   position: sticky;
   top: 0;
   background: rgba(255,255,255,.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   z-index: 10;
-}
-
-header > div:nth-child(1){
-  display: flex;
-  align-items: center;
-}
-
-header > div:nth-child(2){
-  display: grid;
-  gap: 2px;
-}
-
-header > div:nth-child(2) h4{
-  color: var(--muted);
-  font-weight: 600;
 }
 
 /* nav horizontal con flex */
@@ -93,6 +78,11 @@ nav a:hover{
   border: 1px solid var(--border);
 }
 
+header div:nth-child(2) {
+  text-align: center;
+}
+
+/*main*/
 .experiencia{
   background-color: #cff3df;  
 }
@@ -114,17 +104,14 @@ nav a:hover{
   text-shadow: 2px, 2px, 2px, rgb(140, 47, b49);
 }
 
+/* ====== Imágenes 300x300 ====== */
 .imagen300{
-  height: 300px;
   width: 300px;
-}
-
-footer ul{
-  background-color: chocolate;
-}
-
-h2{
-  text-align: center;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 form{
@@ -133,6 +120,35 @@ form{
   padding: 30px;
 }
 
-nav ul li{
+/* ====== Footer ====== */
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+
+  background: #222;
+  color: rgba(255,255,255,.92);
+  padding: 34px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer > div, footer > p{
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+footer ul{
   list-style: none;
+  display: grid;
+  gap: 6px;
+  padding: 0;
+}
+
+footer div:nth-child(2) {
+  text-align: center;
+}
+
+footer div:nth-child(3) {
+  text-align: right;
 }
