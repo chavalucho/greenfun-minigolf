@@ -82,9 +82,41 @@ header div:nth-child(2) {
   text-align: center;
 }
 
-/*main*/
+/* ====== Secciones (Grid) ====== */
+section{
+  padding: 42px 0;
+}
+
+/* Experiencia: 2 columnas (texto + imagen) */
 .experiencia{
-  background-color: #cff3df;  
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: center;
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 42px 30px;
+  margin-top: 18px;
+}
+
+/* el contenido de Experiencia es: h2 + div + div */
+.experiencia > h2{
+  grid-column: span 2;
+  text-align: center;
+}
+
+.experiencia > div{
+  display: grid;
+  gap: 20px;
+}
+
+.experiencia div:nth-child(2) {
+  text-align: center;
+}
+.experiencia div:nth-child(3) {
+  justify-self: center;
 }
 
 .servicios{
