@@ -85,6 +85,7 @@ header div:nth-child(2) {
 /* ====== Secciones (Grid) ====== */
 section{
   padding: 42px 0;
+  margin: 5px 0;
 }
 
 /* Experiencia: 2 columnas (texto + imagen) */
@@ -119,8 +120,41 @@ section{
   justify-self: center;
 }
 
+/* Servicios: cards 3 columnas*/
 .servicios{
-  background-color: beige;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  background: #fff7e6;
+  border-radius: var(--radius);
+  padding: 42px 18px;
+  border: 1px solid var(--border);
+}
+
+.servicios > h2{
+  grid-column: span 3;
+  text-align: center;
+}
+
+.servicios > div{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+}
+
+.servicios > div {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servicios > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
 }
 
 .testimonios{
