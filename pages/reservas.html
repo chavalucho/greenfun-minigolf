@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Green Fun - Mini Golf</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -26,46 +26,87 @@
         </div>
         
     </header>
+    
     <main>
-        <!-- usar grid aqui en el formulario-->
-        <section>
-            <h2>Reserva y asegúrate momentos de gran diversión</h2>
-            <form>
-                <label for="name_form">Nombre</label>
-                <input type="text" id="name_form">
-                <br>
-                <label for="lastname_form">Apellido</label>
-                <input type="text" id="lastname_form">
-                <br>
-                <label for="celular_form">Celular</label>
-                <input type="number" id="celular_form">
-                <br>
-                <label for="email_form">Email</label>
-                <input type="email" id="email_form">
-                <br>
-                <label for="fecha_form">Fecha de Reserva</label>
-                <input type="date" id="fecha_form">
-                <br>
-                <label for="hora_form">Hora de Reserva</label>
-                <input type="time" id="hora_form" step="1800" min="11:00" max="21:00">
-                <br>
-                <label for="cantidad_form">Cantidad de personas</label>
-                <input type="number" id="cantidad_form" min="5" max="25">
-                <br>
-                <label for="motivo">Motivo de reserva</label>
-                <select name="motivo" id="motivo">
-                    <option value="cumple">Cumpleaños</option>
-                    <option value="diversion">Pasar el rato</option>
-                    <option value="trabajo">Team Building</option>
-                    <option value="torneo">Torneo</option>
-                </select>
-                <br>
-                <textarea name="comentarios_form" id="comentarios_form">Deja tus comentarios adicionales aquí</textarea>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
+        <section class="reservas">
+            <h2>Haz tu reserva</h2>
 
+            <div class="reserva-grid">
+                <!-- INFO -->
+                <aside class="reserva-info">
+                <h3>¿Qué incluye?</h3>
+                <ul class="reserva-lista">
+                    <li>✅ Acceso a mini golf</li>
+                    <li>✅ Ideal para familia, amigos y equipos</li>
+                    <li>✅ Confirmación por WhatsApp o correo</li>
+                </ul>
+
+                <div class="reserva-tip">
+                    <h4>Tip</h4>
+                    <p>Para eventos corporativos o cumpleaños, déjanos un mensaje y te proponemos opciones.</p>
+                </div>
+                </aside>
+
+                <!-- FORM -->
+                <form class="reserva-form">
+                <div class="form-row">
+                    <div class="form-field">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Ej: Luis Chávarri" required />
+                    </div>
+
+                    <div class="form-field">
+                    <label for="telefono">Teléfono / WhatsApp</label>
+                    <input id="telefono" name="telefono" type="tel" placeholder="Ej: +51 999 999 999" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                    <label for="correo">Correo</label>
+                    <input id="correo" name="correo" type="email" placeholder="Ej: luis@mail.com" required />
+                    </div>
+
+                    <div class="form-field">
+                    <label for="tipo">Tipo de reserva</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option>Visita normal</option>
+                        <option>Cumpleaños</option>
+                        <option>Torneo entre amigos</option>
+                        <option>Evento corporativo</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                    <label for="fecha">Fecha</label>
+                    <input id="fecha" name="fecha" type="date" required />
+                    </div>
+
+                    <div class="form-field">
+                    <label for="hora">Hora</label>
+                    <input id="hora" name="hora" type="time" required />
+                    </div>
+
+                    <div class="form-field">
+                    <label for="personas">Personas</label>
+                    <input id="personas" name="personas" type="number" min="1" max="30" value="2" required />
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="mensaje">Mensaje (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos si es un evento, si quieres torneo, etc."></textarea>
+                </div>
+
+                <button type="submit">Reservar ahora</button>
+                </form>
+            </div>
+        </section>
     </main>
+
     <footer>
         
         <div>
