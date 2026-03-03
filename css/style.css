@@ -228,25 +228,9 @@ section{
   padding-left: 28px;
 }
 
-/* Comilla decorativa */
-.testimonios p::before{
-  content: "“";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  font-size: 3rem;
+.testimonios p::first-letter{
   color: rgba(46,204,113,.25);
-  font-family: serif;
-}
-
-.testimonios p::after{
-  content: "”";
-  position: absolute;
-  right: 0;
-  bottom: -38px;
-  font-size: 3rem;
-  color: rgba(46,204,113,.25);
-  font-family: serif;
+  font-size: 2rem;
 }
 
 .testimonios h4{
@@ -345,6 +329,11 @@ form textarea{
   list-style: none;
   display: grid;
   gap: 8px;
+}
+
+.reserva-lista li::marker{
+  content: "✅";
+  font-size: 16px;
 }
 
 .reserva-tip{
