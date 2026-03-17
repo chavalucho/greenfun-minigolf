@@ -121,7 +121,7 @@ header div:nth-child(2) {
 
 .paginaactiva{
   background-color: gainsboro;
-  text-shadow: 2px, 2px, 2px, rgb(140, 47, b49);
+  text-shadow: 2px, 2px, 2px, rgb(140, 47, 49);
 }
 
 /* ====== Secciones (Grid) ====== */
@@ -353,16 +353,24 @@ form textarea{
   gap: 12px;
 }
 
-.reserva-lista{
-  list-style: none;
-  display: grid;
-  gap: 8px;
+.reserva-lista {
+    list-style: none;
+    padding: 0;
 }
 
-.reserva-lista li::marker{
-  content: "✅";
-  font-size: 16px;
+.reserva-lista li::before {
+    content: "⛳ ";
+    margin-right: 6px;
 }
+
+.reserva-info li{
+    transition: transform 0.2s ease;
+}
+
+.reserva-info li:hover{
+    transform: translateX(5px);
+}
+
 
 .reserva-tip{
   border: 1px dashed rgba(46,204,113,.35);
@@ -566,4 +574,64 @@ footer div:nth-child(2) {
 
 footer div:nth-child(3) {
   text-align: right;
+}
+
+
+@media (max-width: 768px){
+
+  header{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  nav ul{
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .experiencia,
+  .cumpleanhos,
+  .torneos,
+  .reserva-grid{
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+
+  .experiencia > h2,
+  .cumpleanhos > h2,
+  .torneos > h2{
+    grid-column: span 1;
+  }
+
+  .servicios,
+  .testimonios,
+  footer{
+    grid-template-columns: 1fr;
+  }
+
+  .form-row,
+  .form-row:nth-of-type(3){
+    grid-template-columns: 1fr;
+  }
+
+  .imagen300{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .ajusta-carrusel{
+    height: 250px;
+  }
+
+  footer{
+    text-align: center;
+  }
+
+  footer div:nth-child(2),
+  footer div:nth-child(3){
+    text-align: center;
+  }
 }
