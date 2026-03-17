@@ -30,6 +30,34 @@ a:hover{
   --contenedor: 1100px;
 }
 
+header{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+header p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+header img{
+    transition: transform 0.4s ease;
+}
+
+header img:hover{
+    transform: rotate(360deg);
+}
+
+nav a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
@@ -412,6 +440,14 @@ form textarea{
   transform: translateY(0);
   box-shadow: 0 6px 12px rgba(0,0,0,.15);
 }
+
+/* ====== Comentarios ======*/
+.comentarios-contenedor{
+    display: flex;
+    gap: 40px;
+}
+
+
 /* ====== Galeria ======*/
 .cumpleanhos{
   display: grid;
@@ -424,6 +460,14 @@ form textarea{
   border-radius: var(--radius);
   padding: 42px 30px;
   margin-top: 18px;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
 }
 
 /* el contenido de cumpleanhos es: h2 + div + div */
