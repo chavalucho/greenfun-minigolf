@@ -1,0 +1,16 @@
+//utilities: variables, mixins
+//base: estilos generales, tipografias, resets
+//layout: estructura general, header, main
+//components: cards, botones, forms
+
+@use "./utilities/variables" as *;
+@use "./utilities/mixins" as *;
+
+@use "./base/reset";
+@use "./base/tipografias";
+
+@use "./layout/footer";
+@use "./layout/header";
+@use "./layout/main";
+
+@use "./components/_cajas";

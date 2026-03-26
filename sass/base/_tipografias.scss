@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+
+body,
+header,
+nav a {
+  font-family: $font-main;
+}
+
+header {
+  font-size: 14px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

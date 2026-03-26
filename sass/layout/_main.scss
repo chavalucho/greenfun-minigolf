@@ -1,0 +1,307 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.experiencia {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: center;
+  background: $light;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  border-radius: $radius;
+  padding: 42px 30px;
+  margin-top: 18px;
+
+  > h2 {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  > div {
+    display: grid;
+    gap: 20px;
+  }
+
+  div:nth-child(2) {
+    text-align: center;
+  }
+
+  div:nth-child(3) {
+    justify-self: center;
+  }
+}
+
+.imagen300 {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: $radius;
+  border: 1px solid $border;
+  box-shadow: $shadow;
+}
+
+/* Reservas */
+.reservas {
+  display: grid;
+  gap: 18px;
+  background: #f7fff9;
+  border-radius: $radius;
+  padding: 42px 18px;
+  border: 1px solid $border;
+}
+
+.reserva-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.reserva-info {
+  @include card;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.reserva-lista {
+  list-style: none;
+  padding: 0;
+
+  li::before {
+    content: "⛳ ";
+    margin-right: 6px;
+  }
+}
+
+.reserva-info li {
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
+.reserva-tip {
+  border: 1px dashed rgba(46, 204, 113, 0.35);
+  background: rgba(46, 204, 113, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+form {
+  background: #1f8f8a;
+  color: white;
+  padding: 18px;
+  border-radius: $radius;
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+
+  label {
+    font-weight: 700;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+  }
+
+  textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+}
+
+.reserva-form {
+  @include card;
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+
+  label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: $green2;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid $border;
+    background: #fff;
+    outline: none;
+
+    &:focus {
+      border-color: rgba(46, 204, 113, 0.5);
+      box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.12);
+    }
+  }
+
+  button {
+    background: rgba(46, 204, 113, 0.5);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      filter: brightness(1.05);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  &:nth-of-type(3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+/* Comentarios */
+.comentarios-contenedor {
+  display: flex;
+  gap: 40px;
+}
+
+/* Galería */
+.cumpleanhos,
+.torneos {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: center;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  border-radius: $radius;
+  padding: 42px 30px;
+  margin-top: 18px;
+
+  > h2 {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  > div {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+.cumpleanhos {
+  background: $light;
+
+  div:nth-child(2) {
+    text-align: center;
+  }
+
+  div:nth-child(3) {
+    justify-self: center;
+  }
+}
+
+.torneos {
+  background: #fff7e6;
+
+  div:nth-child(2) {
+    text-align: left;
+  }
+
+  div:nth-child(3) {
+    justify-self: center;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.lista-cumple li::marker {
+  content: "🎂";
+  font-size: 16px;
+}
+
+.lista-torneo li::marker {
+  content: "🏆";
+  font-size: 16px;
+}
+
+
+
+/* Responsive */
+@include responsive-mobile {
+  .experiencia,
+  .cumpleanhos,
+  .torneos,
+  .reserva-grid {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+
+  .experiencia > h2,
+  .cumpleanhos > h2,
+  .torneos > h2 {
+    grid-column: span 1;
+  }
+
+  .form-row,
+  .form-row:nth-of-type(3) {
+    grid-template-columns: 1fr;
+  }
+
+  .comentarios-contenedor,
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .comentarios-contenedor {
+    flex-direction: column;
+  }
+
+  .imagen300 {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+
+  footer {
+    text-align: center;
+
+    div:nth-child(2),
+    div:nth-child(3) {
+      text-align: center;
+    }
+  }
+}

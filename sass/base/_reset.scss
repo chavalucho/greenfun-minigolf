@@ -1,0 +1,59 @@
+@use "../utilities/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background: $bg;
+  color: $text;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+header,
+main,
+footer {
+  width: min(100% - 32px, $contenedor);
+  margin-inline: auto;
+}
+
+main {
+  padding: 26px 0 50px;
+}
+
+section {
+  padding: 42px 0;
+  margin: 5px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 14px;
+}
