@@ -7,29 +7,37 @@
     <meta name="description" content="Green Fun es el mini golf más divertido de la ciudad. Ven con amigos y familia a disfrutar de una experiencia única.">
     <meta name="keywords" content="mini golf, golf divertido, entretenimiento, golf familiar">
     <meta name="author" content="Luis Chavarri">
+    <!--Los estilos de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <div>
-            <img src="../img/Pelotita.png" alt="Logo Green Fun" height="100">
-        </div>
-        <div>
-            <h1>Green Fun</h1>
-            <p>Diversión para todos</p>
-        </div>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
-                    <li><a href="./galeria.html">Galeria</a></li>
-                    <li><a href="./reservas.html">Reservas</a></li>
-                    <li><a href="#" class="paginaactiva">Comentarios</a></li>
+        <nav class="navbar navbar-expand-md bg-white border-bottom">
+            <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                <img src="./img/Pelotita.png" alt="Logo Green Fun" height="60">
+                <div>
+                <h1 class="m-0 fs-4">Green Fun</h1>
+                <p class="m-0 small">Diversión para todos</p>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGreenFun" aria-controls="menuGreenFun" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuGreenFun">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="./preguntas.html">Preguntas Frecuentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="./reservas.html">Reservas</a></li>
+                <li class="nav-item"><a class="nav-link" href="./comentarios.html">Comentarios</a></li>
                 </ul>
-            </nav>
-        </div>
-        
+            </div>
+            </div>
+        </nav>
     </header>
     <main class="comentarios-main">
 
@@ -107,6 +115,9 @@
             </ul>
         </div>
     </footer>
+
+    <!--Las funcionalidades de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
 </body>
 </html>

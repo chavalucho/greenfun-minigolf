@@ -95,64 +95,31 @@ footer div:nth-child(3) {
   text-align: right;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 3px 0;
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  z-index: 10;
+header .navbar-brand h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
-header img {
+header .navbar-brand p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+header .navbar-brand img {
   transition: transform 0.4s ease;
 }
-header img:hover {
+header .navbar-brand img:hover {
   transform: rotate(360deg);
 }
-header div:nth-child(2) {
-  text-align: center;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 5px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-nav a {
-  display: inline-flex;
-  padding: 8px 12px;
+header .nav-link {
   border-radius: 999px;
 }
-nav a:hover {
+header .nav-link:hover {
   background: rgba(46, 204, 113, 0.12);
-  text-decoration: none;
 }
-
-.paginaactiva {
+header .active {
   background: rgba(46, 204, 113, 0.2);
-  border: 1px solid rgba(46, 204, 113, 0.4);
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 12px 0;
-  }
-  nav ul {
-    justify-content: center;
-    gap: 10px;
-  }
-}
 .experiencia {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;

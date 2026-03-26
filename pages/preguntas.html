@@ -15,25 +15,31 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="../img/Pelotita.png" alt="Logo Green Fun" height="100">
-        </div>
-        <div>
-            <h1>Green Fun</h1>
-            <p>Diversión para todos</p>
-        </div>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="#" class="paginaactiva">Preguntas Frecuentes</a></li>
-                    <li><a href="./galeria.html">Galeria</a></li>
-                    <li><a href="./reservas.html">Reservas</a></li>
-                    <li><a href="./comentarios.html">Comentarios</a></li>
+        <nav class="navbar navbar-expand-md bg-white border-bottom">
+            <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                <img src="./img/Pelotita.png" alt="Logo Green Fun" height="60">
+                <div>
+                <h1 class="m-0 fs-4">Green Fun</h1>
+                <p class="m-0 small">Diversión para todos</p>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGreenFun" aria-controls="menuGreenFun" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuGreenFun">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="./preguntas.html">Preguntas Frecuentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="./reservas.html">Reservas</a></li>
+                <li class="nav-item"><a class="nav-link" href="./comentarios.html">Comentarios</a></li>
                 </ul>
-            </nav>
-        </div>
-        
+            </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="accordion" id="accordionExample">
